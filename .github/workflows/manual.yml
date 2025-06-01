@@ -36,8 +36,13 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       run: echo "Hello ${{ inputs.name }}"
+  # This workflow contains a single job called "greet"
   department:
-    run-on: unduntu-latest
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: Department of the person belong to
-      run: echo "Person department ${{inputs.department}}"
+    # Runs a single command using the runners shell
+    - name: Department of the person belongs to
+      run: echo "Person belongs to department ${{ inputs.department }}"
